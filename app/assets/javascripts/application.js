@@ -8,3 +8,9 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require allPages
+//= require jquery_nested_form
+//= require jquery-ui
+//= require jquery-ui-timepicker-addon.js
+//= require jquery.min.js
+//= require autocomplete-rails
+//= require_tree .

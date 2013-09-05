@@ -1,0 +1,29 @@
+<h1>Listado de sesions</h1>
+
+<table>
+  <tr>
+    <th>Motivo de consulta</th>
+    <th>Fecha de sesion</th>
+    <th>Paciente</th>
+    <th>Observaciones</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sesions.each do |sesion| %>
+  <tr>
+    <td><%= sesion.motivo_de_consulta %></td>
+    <td><%= sesion.fecha_de_sesion %></td>
+    <td><%= sesion.paciente_id %></td>
+    <td><%= sesion.observaciones %></td>
+    <td><%= link_to 'Ver', sesion %></td>
+    <td><%= link_to 'Editar', edit_sesion_path(sesion) %></td>
+    <td><%= link_to 'Eliminar', sesion, method: :delete, data: { confirm: '¿Seguro desea eliminar?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Sesion', new_sesion_path %>

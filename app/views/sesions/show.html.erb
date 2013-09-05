@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Motivo de consulta:</b>
+  <%= @sesion.motivo_de_consulta %>
+</p>
+
+<p>
+  <b>Fecha de sesion:</b>
+  <%= @sesion.fecha_de_sesion %>
+</p>
+
+<p>
+  <b>Paciente:</b>
+  <%= @sesion.paciente_id %>
+</p>
+
+<p>
+  <b>Observaciones:</b>
+  <%= @sesion.observaciones %>
+</p>
+
+
+<%= link_to 'Editar', edit_sesion_path(@sesion) %> |
+<%= link_to 'Atrás', sesions_path %>

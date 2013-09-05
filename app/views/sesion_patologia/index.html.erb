@@ -1,0 +1,25 @@
+<h1>Listado de sesion_patologia</h1>
+
+<table>
+  <tr>
+    <th>Sesion</th>
+    <th>Patologia</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sesion_patologia.each do |sesion_patologium| %>
+  <tr>
+    <td><%= sesion_patologium.sesion_id %></td>
+    <td><%= sesion_patologium.patologia_id %></td>
+    <td><%= link_to 'Ver', sesion_patologium %></td>
+    <td><%= link_to 'Editar', edit_sesion_patologium_path(sesion_patologium) %></td>
+    <td><%= link_to 'Eliminar', sesion_patologium, method: :delete, data: { confirm: '¿Seguro desea eliminar?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Sesion patologium', new_sesion_patologium_path %>

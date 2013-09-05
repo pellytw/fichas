@@ -1,0 +1,25 @@
+<%= form_for(@sesion_patologium) do |f| %>
+  <% if @sesion_patologium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sesion_patologium.errors.count, "error") %> prohibited this sesion_patologium from being saved:</h2>
+
+      <ul>
+      <% @sesion_patologium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sesion_id %><br />
+    <%= f.text_field :sesion_id %>
+  </div>
+  <div class="field">
+    <%= f.label :patologia_id %><br />
+    <%= f.text_field :patologia_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @patologium.nombre %>
+</p>
+
+<p>
+  <b>Tipo de patologia:</b>
+  <%= @patologium.tipo_de_patologia_id %>
+</p>
+
+
+<%= link_to 'Editar', edit_patologium_path(@patologium) %> |
+<%= link_to 'Atrás', patologia_path %>

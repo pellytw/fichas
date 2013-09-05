@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sesion:</b>
+  <%= @sesion_patologium.sesion_id %>
+</p>
+
+<p>
+  <b>Patologia:</b>
+  <%= @sesion_patologium.patologia_id %>
+</p>
+
+
+<%= link_to 'Editar', edit_sesion_patologium_path(@sesion_patologium) %> |
+<%= link_to 'Atrás', sesion_patologia_path %>

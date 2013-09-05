@@ -1,0 +1,27 @@
+<h1>Listado de paciente_turnos</h1>
+
+<table>
+  <tr>
+    <th>Paciente</th>
+    <th>Turno</th>
+    <th>Fecha y hora</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @paciente_turnos.each do |paciente_turno| %>
+  <tr>
+    <td><%= paciente_turno.paciente_id %></td>
+    <td><%= paciente_turno.turno_id %></td>
+    <td><%= paciente_turno.fecha_y_hora %></td>
+    <td><%= link_to 'Ver', paciente_turno %></td>
+    <td><%= link_to 'Editar', edit_paciente_turno_path(paciente_turno) %></td>
+    <td><%= link_to 'Eliminar', paciente_turno, method: :delete, data: { confirm: '¿Seguro desea eliminar?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Paciente turno', new_paciente_turno_path %>

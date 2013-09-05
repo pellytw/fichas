@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  tipo_de_patologia_id: 
+
+two:
+  nombre: MyString
+  tipo_de_patologia_id: 

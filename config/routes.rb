@@ -1,4 +1,20 @@
 Mysecurity::Application.routes.draw do
+  resources :tipo_de_patologia
+
+  resources :patologia
+
+  resources :sesion_patologia
+
+  resources :sesions
+
+  resources :paciente_turnos
+
+  resources :turnos
+
+  resources :tipo_de_documentos
+
+  resources :pacientes
+
   resources :role_permissions
 
     devise_for :users, :path => 'user'
@@ -66,6 +82,6 @@ Mysecurity::Application.routes.draw do
   #
   #
 
-  root :to => "home#index"
+  root :to => "pacientes#index"
 
 end

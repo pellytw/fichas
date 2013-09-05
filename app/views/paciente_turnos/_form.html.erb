@@ -1,0 +1,29 @@
+<%= form_for(@paciente_turno) do |f| %>
+  <% if @paciente_turno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@paciente_turno.errors.count, "error") %> prohibited this paciente_turno from being saved:</h2>
+
+      <ul>
+      <% @paciente_turno.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :paciente_id %><br />
+    <%= f.text_field :paciente_id %>
+  </div>
+  <div class="field">
+    <%= f.label :turno_id %><br />
+    <%= f.text_field :turno_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_y_hora %><br />
+    <%= f.datetime_select :fecha_y_hora %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

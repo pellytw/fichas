@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @turno.descripcion %>
+</p>
+
+
+<%= link_to 'Editar', edit_turno_path(@turno) %> |
+<%= link_to 'Atrás', turnos_path %>

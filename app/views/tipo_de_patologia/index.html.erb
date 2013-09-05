@@ -1,0 +1,23 @@
+<h1>Listado de tipo_de_patologia</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_de_patologia.each do |tipo_de_patologium| %>
+  <tr>
+    <td><%= tipo_de_patologium.nombre %></td>
+    <td><%= link_to 'Ver', tipo_de_patologium %></td>
+    <td><%= link_to 'Editar', edit_tipo_de_patologium_path(tipo_de_patologium) %></td>
+    <td><%= link_to 'Eliminar', tipo_de_patologium, method: :delete, data: { confirm: '¿Seguro desea eliminar?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Tipo de patologium', new_tipo_de_patologium_path %>

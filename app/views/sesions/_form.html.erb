@@ -1,0 +1,33 @@
+<%= form_for(@sesion) do |f| %>
+  <% if @sesion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sesion.errors.count, "error") %> prohibited this sesion from being saved:</h2>
+
+      <ul>
+      <% @sesion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :motivo_de_consulta %><br />
+    <%= f.text_area :motivo_de_consulta %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_de_sesion %><br />
+    <%= f.date_select :fecha_de_sesion %>
+  </div>
+  <div class="field">
+    <%= f.label :paciente_id %><br />
+    <%= f.text_field :paciente_id %>
+  </div>
+  <div class="field">
+    <%= f.label :observaciones %><br />
+    <%= f.text_area :observaciones %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

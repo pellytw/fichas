@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  paciente_id: 
+  turno_id: 
+  fecha_y_hora: 2013-09-05 08:50:29
+
+two:
+  paciente_id: 
+  turno_id: 
+  fecha_y_hora: 2013-09-05 08:50:29

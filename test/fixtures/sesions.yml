@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  motivo_de_consulta: MyText
+  fecha_de_sesion: 2013-09-05
+  paciente_id: 
+  observaciones: MyText
+
+two:
+  motivo_de_consulta: MyText
+  fecha_de_sesion: 2013-09-05
+  paciente_id: 
+  observaciones: MyText

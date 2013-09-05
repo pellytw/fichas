@@ -1,0 +1,2 @@
+module TipoDePatologiaHelper
+end

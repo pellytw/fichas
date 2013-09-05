@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombres:</b>
+  <%= @paciente.nombres %>
+</p>
+
+<p>
+  <b>Apellidos:</b>
+  <%= @paciente.apellidos %>
+</p>
+
+<p>
+  <b>Tipo de documento:</b>
+  <%= @paciente.tipo_de_documento_id %>
+</p>
+
+<p>
+  <b>Documento:</b>
+  <%= @paciente.documento %>
+</p>
+
+<p>
+  <b>Fecha de nacimiento:</b>
+  <%= @paciente.fecha_de_nacimiento %>
+</p>
+
+<p>
+  <b>Localidad:</b>
+  <%= @paciente.localidad %>
+</p>
+
+
+<%= link_to 'Editar', edit_paciente_path(@paciente) %> |
+<%= link_to 'Atrás', pacientes_path %>
